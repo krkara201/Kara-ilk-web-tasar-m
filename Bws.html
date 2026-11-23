@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OFK | Kişisel Web Sitesi</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f7;
+            color: #222;
+        }
+
+        /* ÜST MENÜ */
+        header {
+            background: #17172b;
+            padding: 15px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 50%;
+            background: white;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d6ad60;
+        }
+
+        /* ANA SAYFA */
+        .anasayfa {
+            min-height: 450px;
+            background: linear-gradient(135deg, #17172b, #454577);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .anasayfa img {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            background: white;
+        }
+
+        .anasayfa h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .anasayfa p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .buton {
+            background: #d6ad60;
+            color: #17172b;
+            padding: 13px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* GENEL BÖLÜMLER */
+        section {
+            padding: 65px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #252545;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* HAKKIMDA */
+        .hakkimda p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* YETENEKLER */
+        .yetenekler {
+            background: #e9e9f0;
+        }
+
+        .yetenek-listesi {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .yetenek {
+            background: white;
+            padding: 22px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #0001;
+            font-weight: bold;
+        }
+
+        /* PROJELER */
+        .proje-listesi {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .proje {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #0001;
+            transition: 0.3s;
+        }
+
+        .proje:hover {
+            transform: translateY(-5px);
+        }
+
+        .proje h3 {
+            color: #454577;
+            margin-bottom: 15px;
+        }
+
+        /* İLETİŞİM */
+        .iletisim {
+            background: #e9e9f0;
+            line-height: 2;
+        }
+
+        /* ALT BİLGİ */
+        footer {
+            background: #17172b;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        /* ANDROID VE MOBİL UYUMLULUK */
+        @media screen and (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .anasayfa {
+                min-height: 400px;
+            }
+
+            .anasayfa h1 {
+                font-size: 27px;
+            }
+
+            .anasayfa p {
+                font-size: 15px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+
+            section h2 {
+                font-size: 25px;
+            }
+
+            .proje-listesi {
+                grid-template-columns: 1fr;
+            }
+
+            .yetenek {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ÜST MENÜ -->
+    <header>
+
+        <div class="logo">
+            <img src="logo.png" alt="OFK Kişisel Logo">
+        </div>
+
+        <nav>
+            <a href="#anasayfa">Ana Sayfa</a>
+            <a href="#hakkimda">Hakkımda</a>
+            <a href="#yetenekler">Yeteneklerim</a>
+            <a href="#projeler">Projelerim</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+
+    </header>
+
+    <!-- ANA SAYFA -->
+    <div class="anasayfa" id="anasayfa">
+
+        <img src="logo.png" alt="OFK Logo">
+
+        <h1>Merhaba, Ben Ömer Faruk Kara</h1>
+
+        <p>Web Tasarım Öğrencisi | Grafik Tasarım</p>
+
+        <a href="#hakkimda" class="buton">
+            Beni Tanıyın
+        </a>
+
+    </div>
+
+    <!-- HAKKIMDA -->
+    <section class="hakkimda" id="hakkimda">
+
+        <h2>Hakkımda</h2>
+
+        <p>
+            Merhaba! Ben kişisel web siteme hoş geldiniz.
+            Web tasarımı ve grafik tasarım alanlarına
+            ilgi duyuyorum. Yeni bilgiler öğrenmeyi,
+            yaratıcı çalışmalar yapmayı ve kendimi
+            geliştirmeyi seviyorum.
+
+            Bu web sitesini kendimi tanıtmak ve
+            çalışmalarımı sergilemek amacıyla hazırladım.
+        </p>
+
+    </section>
+
+    <!-- YETENEKLER -->
+    <section class="yetenekler" id="yetenekler">
+
+        <h2>Yeteneklerim</h2>
+
+        <div class="yetenek-listesi">
+
+            <div class="yetenek">HTML</div>
+
+            <div class="yetenek">CSS</div>
+
+            <div class="yetenek">Photoshop</div>
+
+            <div class="yetenek">Web Tasarım</div>
+
+            <div class="yetenek">Grafik Tasarım</div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJELER -->
+    <section id="projeler">
+
+        <h2>Projelerim</h2>
+
+        <div class="proje-listesi">
+
+            <div class="proje">
+                <h3>Logo Tasarımı</h3>
+                <p>
+                    Photoshop programında hazırladığım
+                    kişisel OFK logo çalışması.
+                </p>
+            </div>
+
+            <div class="proje">
+                <h3>Web Tasarımı</h3>
+                <p>
+                    HTML ve CSS kullanarak hazırladığım
+                    kişisel web sitesi.
+                </p>
+            </div>
+
+            <div class="proje">
+                <h3>Grafik Tasarım</h3>
+                <p>
+                    Yaratıcılığımı kullanarak oluşturduğum
+                    tasarım çalışmaları.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section class="iletisim" id="iletisim">
+
+        <h2>İletişim</h2>
+
+        <p>E-posta: emailadresiniz@gmail.com</p>
+
+        <p>Benimle iletişime geçebilirsiniz.</p>
+
+    </section>
+
+    <!-- ALT BİLGİ -->
+    <footer>
+
+        <p>
+            © 2026 OFK | Kişisel Web Sitem
+        </p>
+
+    </footer>
+
+</body>
+</html>
